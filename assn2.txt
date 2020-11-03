@@ -1,0 +1,5 @@
+Handling missing values:
+in our dataset, the missing values were marked with '?'
+Initially random number of clusters were chosen for k-centroids. it was made sure that the random chosen datapoint does not have missing value for any of the attribute.
+after choosing the initial k-centroids, each datapoint was assigned to a cluster from which it has minimum hamming distance.
+Hamming distance is a measure of dissimilarity, the value of the distance is the number of attribute values for a specific datapoint that is not equal to attribute values in centroid. The ?' or the missing value will be counted as dissimilar and will increase the hamming distance. We will use the values of the centroids to fill in the missing value. We are using the very first centroid values because they are randomly chosen and have maximum number of similar attributes. The randomness allow us to remove any bias and similarity measure to chose the right value 
